@@ -1,0 +1,50 @@
+.container {
+ height: 800px;
+ background-color: green;
+ display: grid;
+ grid-template-areas: "head head head head "
+ "LP cont cont RP"  
+ "LP cont cont RP"  
+ "foot foot foot foot"  ;
+ grid-template-columns: 1fr 1fr 1fr 1fr;
+ grid-template-rows: 1fr 1fr 1fr 1fr;
+ align-items: auto;
+gap: 5px 5px; 
+}
+
+.item {
+  border: 1px solid black;
+  background-color: gray
+}
+.header{
+  display: grid ;
+  grid-area: head;
+  grid-template-areas: "head head head"
+                        "hc hc hf"
+                        "hc hc hf";
+                        gap: 5px 5px;
+                        grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr;
+
+  }
+  .headerHeader{
+    grid-area: hh;
+  }
+  .headerContent{
+    grid-area: hc;
+  }
+  .headerFooter{
+    grid-area: hf;
+  }
+.content{
+    grid-area: cont;
+    }
+ .footer{
+      grid-area: foot;
+      }
+      .leftPane{
+        grid-area: LP;
+        }
+        .rightPane{
+          grid-area: RP;
+          }
