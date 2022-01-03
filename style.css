@@ -1,50 +1,80 @@
-.container {
- height: 800px;
- background-color: green;
- display: grid;
- grid-template-areas: "head head head head "
- "LP cont cont RP"  
- "LP cont cont RP"  
- "foot foot foot foot"  ;
- grid-template-columns: 1fr 1fr 1fr 1fr;
- grid-template-rows: 1fr 1fr 1fr 1fr;
- align-items: auto;
-gap: 5px 5px; 
+$primary-color: #2f80ed;
+
+$secondary-color: #333333;
+
+.box {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+.cv {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: aquamarine;
+}
+html, body {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100%;
 }
 
-.item {
-  border: 1px solid black;
-  background-color: gray
+* {
+    color: $secondary-color;
 }
-.header{
-  display: grid ;
-  grid-area: head;
-  grid-template-areas: "head head head"
-                        "hc hc hf"
-                        "hc hc hf";
-                        gap: 5px 5px;
-                        grid-template-columns: 1fr 1fr 1fr;
-grid-template-rows: 1fr 1fr 1fr;
 
-  }
-  .headerHeader{
-    grid-area: hh;
-  }
-  .headerContent{
-    grid-area: hc;
-  }
-  .headerFooter{
-    grid-area: hf;
-  }
-.content{
-    grid-area: cont;
+h1 {
+    color: $primary-color;
+    margin-right: 0.25em;
+}
+
+h2 {
+    color: $primary-color;
+    font-size: 1em;
+    margin-top: 0em;
+    margin-bottom: 1em;
+}
+
+
+h3 {
+    color: $primary-color;
+}
+
+a {
+    color: $primary-color;
+}
+
+.contacts {
+    margin-bottom: 2em;
+}
+
+.contact {
+    display: flex;
+    &__type {
+     min-width: 90px;
     }
- .footer{
-      grid-area: foot;
-      }
-      .leftPane{
-        grid-area: LP;
-        }
-        .rightPane{
-          grid-area: RP;
-          }
+}
+
+.cv {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact {
+    display: flex;
+    &__type {
+        min-width: 90px;
+    }
+}
+
+.experience {
+    display: flex;
+    margin-bottom: 2em;
+    &__date {
+        margin-bottom: 2em;
+        min-width: 185px;
+    }
+    &__name {
+        font-weight: bold;
+    }
+}
